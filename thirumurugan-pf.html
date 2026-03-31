@@ -6,14 +6,18 @@
   <title>Thirumurugan | UI Developer</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="portfolio.css"/>
 </head>
 <body>
+
+<!-- ANIMATED CANVAS BACKGROUND -->
+<canvas id="bgCanvas"></canvas>
 
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg fixed-top py-3">
   <div class="container">
-    <a class="navbar-brand fw-bold text-white" href="#">Thiru<span class="text-primary">.</span></a>
+    <a class="navbar-brand fw-bold" href="#">Thiru<span class="brand-dot">.</span></a>
     <button class="navbar-toggler border-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -31,15 +35,20 @@
 
 <!-- HERO -->
 <section id="hero">
-  <div class="container">
+  <div class="hero-orb orb1"></div>
+  <div class="hero-orb orb2"></div>
+  <div class="hero-orb orb3"></div>
+  <div class="container position-relative">
     <div class="row align-items-center g-5">
       <div class="col-lg-7 hero-text">
         <div class="hero-badge">👋 Available for Opportunities</div>
         <h1 class="hero-title">Hi, I'm <span class="highlight">Thirumurugan</span><br/>UI Developer</h1>
         <p class="hero-sub mt-3 mb-4">10+ years of crafting pixel-perfect, responsive web experiences using HTML5, CSS3, JavaScript & Bootstrap.</p>
+        <!-- React Tech Stack Badges mount point -->
+        <div id="tech-badges" class="mb-4"></div>
         <div class="d-flex flex-wrap gap-3">
-          <a href="#projects" class="btn btn-primary px-4 py-2 rounded-pill">View Projects</a>
-          <a href="#contact" class="btn btn-outline-light px-4 py-2 rounded-pill">Hire Me</a>
+          <a href="#projects" class="btn-fantasy btn-fantasy-primary">View Projects</a>
+          <a href="#contact" class="btn-fantasy btn-fantasy-outline">Hire Me</a>
         </div>
         <div class="d-flex gap-4 mt-4">
           <a href="#" class="text-secondary fs-5 social-icon"><i class="fab fa-github"></i></a>
@@ -61,65 +70,85 @@
     <div class="section-line reveal"></div>
     <div class="row g-4 align-items-center">
       <div class="col-lg-6 reveal fade-left">
-        <p class="text-secondary lh-lg">
+        <p class="lh-lg about-text">
           I'm a passionate UI Developer with <strong class="text-white">10 years of experience</strong> building modern, accessible, and high-performance web interfaces. I specialize in translating design concepts into clean, maintainable code that works flawlessly across all devices and browsers.
         </p>
-        <p class="text-secondary lh-lg">
+        <p class="lh-lg about-text">
           My expertise spans semantic HTML5, advanced CSS3 animations, vanilla JavaScript, and Bootstrap framework — enabling me to deliver polished products efficiently.
         </p>
       </div>
       <div class="col-lg-6 reveal fade-right">
         <div class="row g-3">
-          <div class="col-6"><div class="stat-box"><h3>10+</h3><p class="text-secondary mb-0">Years Experience</p></div></div>
-          <div class="col-6"><div class="stat-box"><h3>50+</h3><p class="text-secondary mb-0">Projects Delivered</p></div></div>
-          <div class="col-6"><div class="stat-box"><h3>30+</h3><p class="text-secondary mb-0">Happy Clients</p></div></div>
-          <div class="col-6"><div class="stat-box"><h3>4</h3><p class="text-secondary mb-0">Core Technologies</p></div></div>
+          <div class="col-6"><div class="stat-box stat-purple"><h3>10+</h3><p class="mb-0">Years Experience</p></div></div>
+          <div class="col-6"><div class="stat-box stat-cyan"><h3>50+</h3><p class="mb-0">Projects Delivered</p></div></div>
+          <div class="col-6"><div class="stat-box stat-gold"><h3>30+</h3><p class="mb-0">Happy Clients</p></div></div>
+          <div class="col-6"><div class="stat-box stat-pink"><h3>4</h3><p class="mb-0">Core Technologies</p></div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SKILLS -->
+<!-- SKILLS — SWIPER SLIDER -->
 <section id="skills">
   <div class="container">
     <div class="section-title reveal">Skills</div>
     <div class="section-line reveal"></div>
-    <div class="row g-4 mb-5">
-      <div class="col-sm-6 col-lg-3 reveal fade-up">
-        <div class="skill-card">
+  </div>
+  <div class="swiper skillsSwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="skill-card skill-html">
           <div class="skill-icon">🌐</div>
           <h5>HTML5</h5>
           <p>Semantic markup, accessibility (WCAG), SEO-friendly structure, Canvas & SVG.</p>
-          <div class="progress mt-3"><div class="progress-bar bg-primary" data-width="95"></div></div>
-          <small class="text-muted">95%</small>
+          <div class="progress mt-3"><div class="progress-bar bar-html" data-width="95"></div></div>
+          <small>95%</small>
         </div>
       </div>
-      <div class="col-sm-6 col-lg-3 reveal fade-up" style="--delay:.1s">
-        <div class="skill-card">
+      <div class="swiper-slide">
+        <div class="skill-card skill-css">
           <div class="skill-icon">🎨</div>
           <h5>CSS3</h5>
           <p>Flexbox, Grid, animations, transitions, custom properties & responsive design.</p>
-          <div class="progress mt-3"><div class="progress-bar bg-info" data-width="92"></div></div>
-          <small class="text-muted">92%</small>
+          <div class="progress mt-3"><div class="progress-bar bar-css" data-width="92"></div></div>
+          <small>92%</small>
         </div>
       </div>
-      <div class="col-sm-6 col-lg-3 reveal fade-up" style="--delay:.2s">
-        <div class="skill-card">
+      <div class="swiper-slide">
+        <div class="skill-card skill-js">
           <div class="skill-icon">⚡</div>
           <h5>JavaScript</h5>
           <p>ES6+, DOM manipulation, async/await, Fetch API, modular patterns.</p>
-          <div class="progress mt-3"><div class="progress-bar bg-warning" data-width="88"></div></div>
-          <small class="text-muted">88%</small>
+          <div class="progress mt-3"><div class="progress-bar bar-js" data-width="88"></div></div>
+          <small>88%</small>
         </div>
       </div>
-      <div class="col-sm-6 col-lg-3 reveal fade-up" style="--delay:.3s">
-        <div class="skill-card">
+      <div class="swiper-slide">
+        <div class="skill-card skill-bs">
           <div class="skill-icon">🅱️</div>
           <h5>Bootstrap</h5>
           <p>Grid system, components, utilities, theming & custom builds with Sass.</p>
-          <div class="progress mt-3"><div class="progress-bar bg-success" data-width="93"></div></div>
-          <small class="text-muted">93%</small>
+          <div class="progress mt-3"><div class="progress-bar bar-bs" data-width="93"></div></div>
+          <small>93%</small>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="skill-card skill-react">
+          <div class="skill-icon">⚛️</div>
+          <h5>React JS</h5>
+          <p>Component-based UI, hooks, state management, JSX & React ecosystem.</p>
+          <div class="progress mt-3"><div class="progress-bar bar-react" data-width="80"></div></div>
+          <small>80%</small>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="skill-card skill-git">
+          <div class="skill-icon">🔧</div>
+          <h5>Git & Tools</h5>
+          <p>Version control, CI/CD pipelines, Webpack, Vite & dev tooling.</p>
+          <div class="progress mt-3"><div class="progress-bar bar-git" data-width="85"></div></div>
+          <small>85%</small>
         </div>
       </div>
     </div>
@@ -135,8 +164,8 @@
       <div class="col-lg-8">
         <div class="timeline">
           <div class="timeline-item reveal fade-left">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card">
+            <div class="timeline-dot dot-purple"></div>
+            <div class="timeline-card tc-purple">
               <h5>Senior UI Developer</h5>
               <div class="d-flex justify-content-between flex-wrap gap-1">
                 <span class="company">Tech Solutions Pvt. Ltd.</span>
@@ -146,22 +175,22 @@
             </div>
           </div>
           <div class="timeline-item reveal fade-left" style="--delay:.15s">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card">
+            <div class="timeline-dot dot-cyan"></div>
+            <div class="timeline-card tc-cyan">
               <h5>UI Developer</h5>
               <div class="d-flex justify-content-between flex-wrap gap-1">
-                <span class="company">Digital Creatives Agency</span>
+                <span class="company company-cyan">Digital Creatives Agency</span>
                 <span class="period">2017 – 2020</span>
               </div>
               <p>Built responsive landing pages and dashboards for 20+ clients, improving page load performance by 40% through CSS & JS optimization.</p>
             </div>
           </div>
           <div class="timeline-item reveal fade-left" style="--delay:.3s">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card">
+            <div class="timeline-dot dot-gold"></div>
+            <div class="timeline-card tc-gold">
               <h5>Front-End Developer</h5>
               <div class="d-flex justify-content-between flex-wrap gap-1">
-                <span class="company">WebCraft Studios</span>
+                <span class="company company-gold">WebCraft Studios</span>
                 <span class="period">2014 – 2017</span>
               </div>
               <p>Developed cross-browser compatible UIs, integrated REST APIs with JavaScript, and maintained design consistency across projects.</p>
@@ -173,69 +202,71 @@
   </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- PROJECTS — SWIPER SLIDER -->
 <section id="projects">
   <div class="container">
     <div class="section-title reveal">Projects</div>
     <div class="section-line reveal"></div>
-    <div class="row g-4">
-      <div class="col-md-6 col-lg-4 reveal fade-up">
+  </div>
+  <div class="swiper projectsSwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
         <div class="project-card">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#1e3a5f,#0d6efd)">🛒</div>
+          <div class="project-thumb" style="background:linear-gradient(135deg,#3b0764,#7c3aed)">🛒</div>
           <div class="project-body">
             <h5>E-Commerce UI</h5>
             <p>Fully responsive storefront with product filters, cart UI, and checkout flow.</p>
-            <div><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Bootstrap</span><span class="tag">JS</span></div>
+            <div><span class="tag tag-purple">HTML5</span><span class="tag tag-cyan">CSS3</span><span class="tag tag-gold">Bootstrap</span><span class="tag tag-pink">JS</span></div>
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4 reveal fade-up" style="--delay:.1s">
+      <div class="swiper-slide">
         <div class="project-card">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#1a3a2a,#16a34a)">📊</div>
+          <div class="project-thumb" style="background:linear-gradient(135deg,#064e3b,#059669)">📊</div>
           <div class="project-body">
             <h5>Admin Dashboard</h5>
             <p>Data-rich dashboard with charts, tables, and real-time UI updates via Fetch API.</p>
-            <div><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JS</span><span class="tag">Bootstrap</span></div>
+            <div><span class="tag tag-purple">HTML5</span><span class="tag tag-cyan">CSS3</span><span class="tag tag-pink">JS</span><span class="tag tag-gold">Bootstrap</span></div>
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4 reveal fade-up" style="--delay:.2s">
+      <div class="swiper-slide">
         <div class="project-card">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#3a1a3a,#9333ea)">🏥</div>
+          <div class="project-thumb" style="background:linear-gradient(135deg,#4c0519,#e11d48)">🏥</div>
           <div class="project-body">
             <h5>Healthcare Portal</h5>
             <p>Accessible patient portal with WCAG 2.1 compliance and mobile-first design.</p>
-            <div><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Bootstrap</span></div>
+            <div><span class="tag tag-purple">HTML5</span><span class="tag tag-cyan">CSS3</span><span class="tag tag-gold">Bootstrap</span></div>
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4 reveal fade-up" style="--delay:.1s">
+      <div class="swiper-slide">
         <div class="project-card">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#3a2a1a,#ea580c)">🏨</div>
+          <div class="project-thumb" style="background:linear-gradient(135deg,#431407,#ea580c)">🏨</div>
           <div class="project-body">
             <h5>Hotel Booking UI</h5>
             <p>Multi-step booking form with date pickers, room gallery, and dynamic pricing.</p>
-            <div><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JS</span></div>
+            <div><span class="tag tag-gold">HTML5</span><span class="tag tag-cyan">CSS3</span><span class="tag tag-pink">JS</span></div>
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4 reveal fade-up" style="--delay:.2s">
+      <div class="swiper-slide">
         <div class="project-card">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#1a2a3a,#0891b2)">📱</div>
+          <div class="project-thumb" style="background:linear-gradient(135deg,#0c4a6e,#0284c7)">📱</div>
           <div class="project-body">
             <h5>SaaS Landing Page</h5>
             <p>High-converting landing page with CSS animations and smooth scroll interactions.</p>
-            <div><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JS</span><span class="tag">Bootstrap</span></div>
+            <div><span class="tag tag-purple">HTML5</span><span class="tag tag-cyan">CSS3</span><span class="tag tag-pink">JS</span><span class="tag tag-gold">Bootstrap</span></div>
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4 reveal fade-up" style="--delay:.3s">
+      <div class="swiper-slide">
         <div class="project-card">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#2a1a1a,#dc2626)">🎓</div>
+          <div class="project-thumb" style="background:linear-gradient(135deg,#1e1b4b,#4f46e5)">🎓</div>
           <div class="project-body">
             <h5>EdTech Platform UI</h5>
             <p>Course catalog, video player UI, and progress tracking dashboard.</p>
-            <div><span class="tag">HTML5</span><span class="tag">Bootstrap</span><span class="tag">JS</span></div>
+            <div><span class="tag tag-purple">HTML5</span><span class="tag tag-gold">Bootstrap</span><span class="tag tag-pink">JS</span></div>
           </div>
         </div>
       </div>
@@ -250,29 +281,29 @@
     <div class="section-line reveal"></div>
     <div class="row g-4 justify-content-center">
       <div class="col-md-6 col-lg-4 reveal fade-up">
-        <div class="contact-card">
-          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+        <div class="contact-card cc-purple">
+          <div class="contact-icon ci-purple"><i class="fas fa-envelope"></i></div>
           <div>
             <h6>Email</h6>
-            <p>thirumurugan@email.com</p>
+            <p>thirumurugan1743@gmail.com</p>
           </div>
         </div>
       </div>
       <div class="col-md-6 col-lg-4 reveal fade-up" style="--delay:.1s">
-        <div class="contact-card">
-          <div class="contact-icon"><i class="fas fa-phone"></i></div>
+        <div class="contact-card cc-cyan">
+          <div class="contact-icon ci-cyan"><i class="fas fa-phone"></i></div>
           <div>
             <h6>Phone</h6>
-            <p>+91 XXXXX XXXXX</p>
+            <p>+91 9360484035</p>
           </div>
         </div>
       </div>
       <div class="col-md-6 col-lg-4 reveal fade-up" style="--delay:.2s">
-        <div class="contact-card">
-          <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="contact-card cc-gold">
+          <div class="contact-icon ci-gold"><i class="fas fa-map-marker-alt"></i></div>
           <div>
             <h6>Location</h6>
-            <p>Tamil Nadu, India</p>
+            <p>Madurai, Tamil Nadu, India</p>
           </div>
         </div>
       </div>
@@ -291,7 +322,12 @@
   <i class="fas fa-arrow-up"></i>
 </button>
 
+<!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- React + ReactDOM (UMD for CDN use) -->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="portfolio.js"></script>
 </body>
 </html>
