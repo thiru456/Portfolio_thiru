@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thirumurugan | UI Developer</title>
+  <title>Thirumurugan | Frontend Developer</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="portfolio.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -42,7 +43,7 @@
     <div class="row align-items-center g-5">
       <div class="col-lg-7 hero-text">
         <div class="hero-badge">👋 Available for Opportunities</div>
-        <h1 class="hero-title">Hi, I'm <span class="highlight">Thirumurugan</span><br/>UI Developer</h1>
+        <h1 class="hero-title">Hi, I'm <span class="highlight">Thirumurugan</span><br/>Frontend Developer</h1>
         <p class="hero-sub mt-3 mb-4">1.2 years of crafting pixel-perfect, responsive web experiences using HTML5, CSS3, JavaScript & Bootstrap.</p>
         <!-- React Tech Stack Badges mount point -->
         <div id="tech-badges" class="mb-4"></div>
@@ -51,13 +52,13 @@
           <a href="#contact" class="btn-fantasy btn-fantasy-outline">Hire Me</a>
         </div>
         <div class="d-flex gap-4 mt-4">
-          <a href="#" class="text-secondary fs-5 social-icon"><i class="fab fa-github"></i></a>
-          <a href="#" class="text-secondary fs-5 social-icon"><i class="fab fa-linkedin"></i></a>
-          <a href="#" class="text-secondary fs-5 social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="https://github.com/thiru456/" class="text-secondary fs-5 social-icon"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/thirumurugan-s-442075281?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="text-secondary fs-5 social-icon"><i class="fab fa-linkedin"></i></a>
+          <!-- <a href="#" class="text-secondary fs-5 social-icon"><i class="fab fa-twitter"></i></a> -->
         </div>
       </div>
       <div class="col-lg-5 d-none d-lg-block text-center">
-        <div class="avatar">💻</div>
+        <div class="avatar overflow-hidden p-3"><img src="https://cdn3d.iconscout.com/3d/premium/thumb/young-man-doing-coding-work-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--web-development-software-app-website-male-character-on-desk-pack-business-illustrations-10098310.png?f=webp" alt="img" class="w-80 h-80" ></div>
       </div>
     </div>
   </div>
@@ -65,26 +66,100 @@
 
 <!-- ABOUT -->
 <section id="about">
+  <div class="about-orb1"></div>
+  <div class="about-orb2"></div>
+  <div class="about-orb3"></div>
   <div class="container">
     <div class="section-title reveal">About Me</div>
     <div class="section-line reveal"></div>
-    <div class="row g-4 align-items-center">
-      <div class="col-lg-6 reveal fade-left">
-        <p class="lh-lg about-text">
-          I'm a passionate UI Developer with <strong class="text-white">10 years of experience</strong> building modern, accessible, and high-performance web interfaces. I specialize in translating design concepts into clean, maintainable code that works flawlessly across all devices and browsers.
-        </p>
-        <p class="lh-lg about-text">
-          My expertise spans semantic HTML5, advanced CSS3 animations, vanilla JavaScript, and Bootstrap framework — enabling me to deliver polished products efficiently.
-        </p>
-      </div>
-      <div class="col-lg-6 reveal fade-right">
-        <div class="row g-3">
-          <div class="col-6"><div class="stat-box stat-purple"><h3>10+</h3><p class="mb-0">Years Experience</p></div></div>
-          <div class="col-6"><div class="stat-box stat-cyan"><h3>50+</h3><p class="mb-0">Projects Delivered</p></div></div>
-          <div class="col-6"><div class="stat-box stat-gold"><h3>30+</h3><p class="mb-0">Happy Clients</p></div></div>
-          <div class="col-6"><div class="stat-box stat-pink"><h3>4</h3><p class="mb-0">Core Technologies</p></div></div>
+    <div class="row g-4 align-items-stretch">
+
+      <!-- Profile Card -->
+      <div class="col-lg-5 reveal fade-left">
+        <div class="about-profile-card">
+          <div class="about-avatar-wrap">
+            <div class="about-avatar overflow-hidden"><img src="/newprofile-img.png" alt="" class="new-img-profile"></div>
+            <div class="about-avatar-ring"></div>
+          </div>
+          <h4 class="about-name">Thirumurugan</h4>
+          <span class="about-role-badge">Junior Frontend Developer</span>
+          <p class="about-bio">
+            I'm a passionate <strong>Frontend Developer</strong> with <strong>1.2 years</strong> of hands-on industry experience — <strong>9 months</strong> as a UI Developer and <strong>3 months</strong> as a React Developer at <strong>Trioangle Technologies</strong>. I specialise in building responsive, pixel-perfect, and accessible web interfaces that deliver great user experiences.
+          </p>
+          <p class="about-bio mt-2">
+            My journey started with a strong foundation in <strong>HTML5, CSS3, and JavaScript</strong>, and has grown into building dynamic, component-driven applications with <strong>React JS</strong>. I enjoy turning complex UI designs into clean, maintainable code and I'm always eager to learn new tools and best practices.
+          </p>
+          <div class="about-highlights mt-3 mb-2">
+            <div class="about-highlight-item"><i class="fas fa-code"></i> Clean, semantic & maintainable code</div>
+            <div class="about-highlight-item"><i class="fas fa-mobile-alt"></i> Mobile-first responsive design</div>
+            <div class="about-highlight-item"><i class="fas fa-bolt"></i> Performance-focused UI development</div>
+            <div class="about-highlight-item"><i class="fas fa-users"></i> Collaborative team player</div>
+          </div>
+          <div class="about-edu">
+            <i class="fas fa-graduation-cap"></i>
+            <span>B.E CSE — Mangayarkarasi College of Engineering</span>
+          </div>
+          <div class="about-seeking">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Based in Madurai, Tamil Nadu, India</span>
+          </div>
+          <div class="about-seeking mt-2">
+            <i class="fas fa-search"></i>
+            <span>Seeking Junior Frontend Developer (React JS) role</span>
+          </div>
         </div>
       </div>
+
+      <!-- Stats Grid -->
+      <div class="col-lg-7 reveal fade-right">
+        <div class="row g-3 h-100">
+          <div class="col-6">
+            <div class="about-stat-card asc-purple">
+              <div class="asc-icon">⏱️</div>
+              <h3>1.2</h3>
+              <p>Years Experience</p>
+              <div class="asc-hover-content">
+                <span>9 months UI Dev</span>
+                <span>3 months React Dev</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="about-stat-card asc-cyan">
+              <div class="asc-icon">🚀</div>
+              <h3>7+</h3>
+              <p>Projects Delivered</p>
+              <div class="asc-hover-content">
+                <span>Web Apps & Dashboards</span>
+                <span>Landing Pages & Portals</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="about-stat-card asc-gold">
+              <div class="asc-icon">🤝</div>
+              <h3>5+</h3>
+              <p>Happy Clients</p>
+              <div class="asc-hover-content">
+                <span>Freelance & Agency</span>
+                <span>Satisfied Customers</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="about-stat-card asc-pink">
+              <div class="asc-icon">⚡</div>
+              <h3>2</h3>
+              <p>Core Technologies</p>
+              <div class="asc-hover-content">
+                <span>React JS</span>
+                <span>HTML / CSS / JS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -166,34 +241,45 @@
           <div class="timeline-item reveal fade-left">
             <div class="timeline-dot dot-purple"></div>
             <div class="timeline-card tc-purple">
-              <h5>Senior UI Developer</h5>
+              <h5>UI Developer <span style="font-size:.8em;font-weight:400">(Full-Time)</span></h5>
               <div class="d-flex justify-content-between flex-wrap gap-1">
-                <span class="company">Tech Solutions Pvt. Ltd.</span>
-                <span class="period">2020 – Present</span>
+                <span class="company">Trioangle Technologies</span>
+                <span class="period">Jun 2025 – Apr 2026</span>
               </div>
-              <p>Led UI development for enterprise web apps, mentored junior developers, and established component libraries using Bootstrap & vanilla JS.</p>
+              <p>Working as a UI Developer building responsive and interactive web interfaces using React JS, HTML5, CSS3, and JavaScript for real-world client projects.</p>
             </div>
           </div>
           <div class="timeline-item reveal fade-left" style="--delay:.15s">
             <div class="timeline-dot dot-cyan"></div>
             <div class="timeline-card tc-cyan">
-              <h5>UI Developer</h5>
+              <h5>React JS Developer <span style="font-size:.8em;font-weight:400">(Internship)</span></h5>
               <div class="d-flex justify-content-between flex-wrap gap-1">
-                <span class="company company-cyan">Digital Creatives Agency</span>
-                <span class="period">2017 – 2020</span>
+                <span class="company company-cyan">Trioangle Technologies</span>
+                <span class="period">Feb 2025 – May 2025</span>
               </div>
-              <p>Built responsive landing pages and dashboards for 20+ clients, improving page load performance by 40% through CSS & JS optimization.</p>
+              <p>Developed dynamic UI components and pages using React JS, gaining hands-on experience with hooks, state management, and component-based architecture.</p>
             </div>
           </div>
           <div class="timeline-item reveal fade-left" style="--delay:.3s">
             <div class="timeline-dot dot-gold"></div>
             <div class="timeline-card tc-gold">
-              <h5>Front-End Developer</h5>
+              <h5>Java Full Stack Developer <span style="font-size:.8em;font-weight:400">(Internship)</span></h5>
               <div class="d-flex justify-content-between flex-wrap gap-1">
-                <span class="company company-gold">WebCraft Studios</span>
-                <span class="period">2014 – 2017</span>
+                <span class="company company-gold">Phoenix Softtech</span>
+                <span class="period">Jan 2024 – Mar 2024</span>
               </div>
-              <p>Developed cross-browser compatible UIs, integrated REST APIs with JavaScript, and maintained design consistency across projects.</p>
+              <p>Built full stack web applications using Java, Spring Boot for backend and HTML/CSS/JS for frontend, working on REST APIs and database integration.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal fade-left" style="--delay:.45s">
+            <div class="timeline-dot dot-pink"></div>
+            <div class="timeline-card tc-pink">
+              <h5>Full Stack Developer <span style="font-size:.8em;font-weight:400">(Internship)</span></h5>
+              <div class="d-flex justify-content-between flex-wrap gap-1">
+                <span class="company company-pink">Beleaf Technologies</span>
+                <span class="period">Jun 2023 – Aug 2023</span>
+              </div>
+              <p>Interned as a Java Full Stack Developer, working on web application development using Java, JSP, and basic frontend technologies.</p>
             </div>
           </div>
         </div>
@@ -230,16 +316,7 @@
           </div>
         </div>
       </div>
-      <div class="swiper-slide">
-        <div class="project-card">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#4c0519,#e11d48)">🏥</div>
-          <div class="project-body">
-            <h5>Healthcare Portal</h5>
-            <p>Accessible patient portal with WCAG 2.1 compliance and mobile-first design.</p>
-            <div><span class="tag tag-purple">HTML5</span><span class="tag tag-cyan">CSS3</span><span class="tag tag-gold">Bootstrap</span></div>
-          </div>
-        </div>
-      </div>
+     
       <div class="swiper-slide">
         <div class="project-card">
           <div class="project-thumb" style="background:linear-gradient(135deg,#431407,#ea580c)">🏨</div>
@@ -260,16 +337,7 @@
           </div>
         </div>
       </div>
-      <div class="swiper-slide">
-        <div class="project-card">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#1e1b4b,#4f46e5)">🎓</div>
-          <div class="project-body">
-            <h5>EdTech Platform UI</h5>
-            <p>Course catalog, video player UI, and progress tracking dashboard.</p>
-            <div><span class="tag tag-purple">HTML5</span><span class="tag tag-gold">Bootstrap</span><span class="tag tag-pink">JS</span></div>
-          </div>
-        </div>
-      </div>
+  
     </div>
   </div>
 </section>
@@ -277,36 +345,88 @@
 <!-- CONTACT -->
 <section id="contact">
   <div class="container">
-    <div class="section-title reveal">Contact</div>
+    <div class="section-title reveal">Contact Me</div>
     <div class="section-line reveal"></div>
     <div class="row g-4 justify-content-center">
-      <div class="col-md-6 col-lg-4 reveal fade-up">
-        <div class="contact-card cc-purple">
-          <div class="contact-icon ci-purple"><i class="fas fa-envelope"></i></div>
-          <div>
-            <h6>Email</h6>
-            <p>thirumurugan1743@gmail.com</p>
+
+      <!-- Info Cards -->
+      <div class="col-lg-4">
+        <div class="d-flex flex-column gap-3">
+          <div class="contact-card cc-purple reveal fade-left">
+            <div class="contact-icon ci-purple"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h6>Email</h6>
+              <p>thirumurugan1743@gmail.com</p>
+            </div>
           </div>
+          <div class="contact-card cc-cyan reveal fade-left" style="--delay:.1s">
+            <div class="contact-icon ci-cyan"><i class="fas fa-phone"></i></div>
+            <div>
+              <h6>Phone</h6>
+              <p>+91 9360484035</p>
+            </div>
+          </div>
+          <div class="contact-card cc-gold reveal fade-left" style="--delay:.2s">
+            <div class="contact-icon ci-gold"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h6>Location</h6>
+              <p>Madurai, Tamil Nadu, India</p>
+            </div>
+          </div>
+         
         </div>
       </div>
-      <div class="col-md-6 col-lg-4 reveal fade-up" style="--delay:.1s">
-        <div class="contact-card cc-cyan">
-          <div class="contact-icon ci-cyan"><i class="fas fa-phone"></i></div>
-          <div>
-            <h6>Phone</h6>
-            <p>+91 9360484035</p>
-          </div>
+
+      <!-- Contact Form -->
+      <div class="col-lg-7 reveal fade-right">
+        <div class="contact-form-card">
+          <h5 class="cf-title">Send a Message</h5>
+          <p class="cf-sub">Fill out the form and I'll get back to you as soon as possible.</p>
+          <form id="contactForm" novalidate>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="cf-field">
+                  <label>Your Name</label>
+                  <input type="text" id="cf-name" placeholder="John Doe" required />
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="cf-field">
+                  <label>Your Email</label>
+                  <input type="email" id="cf-email" placeholder="john@example.com" required />
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="cf-field">
+                  <label>Subject</label>
+                  <input type="text" id="cf-subject" placeholder="Project Inquiry / Job Opportunity" required />
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="cf-field">
+                  <label>Message</label>
+                  <textarea id="cf-message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="cf-submit" id="cf-btn">
+                  <span id="cf-btn-text"><i class="fas fa-paper-plane me-2"></i>Send Message</span>
+                  <span id="cf-btn-loading" style="display:none"><i class="fas fa-spinner fa-spin me-2"></i>Sending...</span>
+                </button>
+              </div>
+              <div class="col-12">
+                <div id="cf-success" class="cf-alert cf-alert-success" style="display:none">
+                  <i class="fas fa-check-circle me-2"></i>Message sent! I'll reply soon.
+                </div>
+                <div id="cf-error" class="cf-alert cf-alert-error" style="display:none">
+                  <i class="fas fa-exclamation-circle me-2"></i>Something went wrong. Please try again.
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4 reveal fade-up" style="--delay:.2s">
-        <div class="contact-card cc-gold">
-          <div class="contact-icon ci-gold"><i class="fas fa-map-marker-alt"></i></div>
-          <div>
-            <h6>Location</h6>
-            <p>Madurai, Tamil Nadu, India</p>
-          </div>
-        </div>
-      </div>
+
     </div>
   </div>
 </section>
@@ -329,5 +449,49 @@
 <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 <script src="portfolio.js"></script>
+<script>
+  // EmailJS init — replace with your actual Public Key
+  emailjs.init('YOUR_PUBLIC_KEY');
+
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const name    = document.getElementById('cf-name').value.trim();
+    const email   = document.getElementById('cf-email').value.trim();
+    const subject = document.getElementById('cf-subject').value.trim();
+    const message = document.getElementById('cf-message').value.trim();
+
+    if (!name || !email || !subject || !message) return;
+
+    const btn     = document.getElementById('cf-btn');
+    const btnText = document.getElementById('cf-btn-text');
+    const btnLoad = document.getElementById('cf-btn-loading');
+    const success = document.getElementById('cf-success');
+    const error   = document.getElementById('cf-error');
+
+    btn.disabled = true;
+    btnText.style.display = 'none';
+    btnLoad.style.display = 'inline';
+    success.style.display = 'none';
+    error.style.display   = 'none';
+
+    // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your EmailJS values
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+      from_name:    name,
+      from_email:   email,
+      subject:      subject,
+      message:      message,
+      to_email:     'thirumurugan1743@gmail.com',
+    }).then(() => {
+      success.style.display = 'flex';
+      this.reset();
+    }).catch(() => {
+      error.style.display = 'flex';
+    }).finally(() => {
+      btn.disabled = false;
+      btnText.style.display = 'inline';
+      btnLoad.style.display = 'none';
+    });
+  });
+</script>
 </body>
 </html>
