@@ -528,7 +528,10 @@ section { padding: 90px 0; }
 .about-stat-card:hover > h3,
 .about-stat-card:hover > p { opacity: 0; }
 
-.asc-icon { font-size: 1.8rem; margin-bottom: 8px; transition: opacity 0.3s; }
+.asc-icon { font-size: 1.8rem; margin-bottom: 8px; transition: opacity 0.3s;
+width: 75px;
+height: 75px;
+}
 .about-stat-card h3 {
   font-size: 2.2rem;
   font-weight: 800;
