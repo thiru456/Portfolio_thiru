@@ -158,8 +158,35 @@ const projectsSwiper = new Swiper('.projectsSwiper', {
 });
 
 /* =====================
-   SCROLL REVEAL
+   SCROLL REVEAL — unique animation per section
 ===================== */
+
+// Map each section to a scroll animation type
+const sectionAnimMap = {
+  hero:       null,          // hero is always visible
+  about:      'zoom-in',
+  skills:     'flip-x',
+  experience: 'rotate-in',
+  projects:   'bounce-up',
+  contact:    'skew-in',
+};
+
+// Assign animation classes to .reveal elements inside each section
+Object.entries(sectionAnimMap).forEach(([id, animClass]) => {
+  if (!animClass) return;
+  const sec = document.getElementById(id);
+  if (!sec) return;
+  sec.querySelectorAll('.reveal').forEach((el, i) => {
+    // Remove old directional classes
+    el.classList.remove('fade-left', 'fade-right', 'fade-up');
+    el.classList.add(animClass);
+    // Stagger delay per element
+    if (!el.style.getPropertyValue('--delay')) {
+      el.style.setProperty('--delay', `${i * 0.08}s`);
+    }
+  });
+});
+
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -167,9 +194,24 @@ const revealObserver = new IntersectionObserver((entries) => {
       revealObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.15 });
+}, { threshold: 0.12 });
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+/* =====================
+   CARD TILT ON SCROLL POSITION
+===================== */
+document.querySelectorAll('.about-stat-card, .timeline-card, .contact-card').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const r = card.getBoundingClientRect();
+    const x = ((e.clientX - r.left) / r.width  - 0.5) * 14;
+    const y = ((e.clientY - r.top)  / r.height - 0.5) * -14;
+    card.style.transform = `perspective(600px) rotateY(${x}deg) rotateX(${y}deg) translateY(-6px)`;
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = '';
+  });
+});
 
 /* =====================
    PROGRESS BAR ANIMATE
