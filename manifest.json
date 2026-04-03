@@ -1,0 +1,22 @@
+{
+  "name": "Thirumurugan S | React JS Developer",
+  "short_name": "Thiru Portfolio",
+  "description": "Portfolio of Thirumurugan S, React JS Developer and Frontend Developer in Madurai, Tamil Nadu.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#06030f",
+  "theme_color": "#a855f7",
+  "lang": "en-IN",
+  "icons": [
+    {
+      "src": "https://cdn3d.iconscout.com/3d/premium/thumb/developer-3d-icon-png-download-13423431.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://cdn3d.iconscout.com/3d/premium/thumb/developer-3d-icon-png-download-13423431.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -260,11 +260,26 @@
   }
   </script>
 
+  <!-- ===================== PWA MANIFEST ===================== -->
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- ===================== PRECONNECT (speed) ===================== -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://cdn3d.iconscout.com" crossorigin />
+
+  <!-- ===================== GOOGLE FONT ===================== -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- ===================== CSS ===================== -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="portfolio.css"/>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- ===================== DEFERRED SCRIPTS ===================== -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
 </head>
 <body>
 
@@ -314,7 +329,7 @@
         </div>
       </div>
       <div class="col-lg-5 text-center">
-        <div class="avatar overflow-hidden p-3"><img src="https://cdn3d.iconscout.com/3d/premium/thumb/young-man-doing-coding-work-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--web-development-software-app-website-male-character-on-desk-pack-business-illustrations-10098310.png?f=webp" alt="img" class="w-80 h-80" ></div>
+        <div class="avatar overflow-hidden p-3"><img src="https://cdn3d.iconscout.com/3d/premium/thumb/young-man-doing-coding-work-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--web-development-software-app-website-male-character-on-desk-pack-business-illustrations-10098310.png?f=webp" alt="Thirumurugan S - React JS Developer" class="w-80 h-80" fetchpriority="high"></div>
       </div>
     </div>
   </div>
@@ -334,7 +349,7 @@
       <div class="col-lg-5 reveal fade-left">
         <div class="about-profile-card">
           <div class="about-avatar-wrap">
-            <div class="about-avatar overflow-hidden"><img src="/post-image.png" alt="" class="new-img-profile"></div>
+            <div class="about-avatar overflow-hidden"><img src="/post-image.png" alt="Thirumurugan S profile photo" class="new-img-profile" loading="lazy"></div>
             <div class="about-avatar-ring"></div>
           </div>
           <h4 class="about-name">Thirumurugan</h4>
@@ -371,7 +386,7 @@
         <div class="row g-3 h-100">
           <div class="col-6">
             <div class="about-stat-card asc-purple">
-              <div class="asc-icon"><img src="https://cdn3d.iconscout.com/3d/premium/thumb/work-experience-3d-icon-download-in-png-blend-fbx-gltf-file-formats--job-history-employment-career-timeline-working-time-curriculum-vitae-pack-business-icons-11245430.png" alt="" class="w-100 h-100" ></div>
+              <div class="asc-icon"><img src="https://cdn3d.iconscout.com/3d/premium/thumb/work-experience-3d-icon-download-in-png-blend-fbx-gltf-file-formats--job-history-employment-career-timeline-working-time-curriculum-vitae-pack-business-icons-11245430.png" alt="Years of experience" class="w-100 h-100" loading="lazy"></div>
               <h3>1.2</h3>
               <p>Years Experience</p>
               <div class="asc-hover-content">
@@ -382,7 +397,7 @@
           </div>
           <div class="col-6">
             <div class="about-stat-card asc-cyan">
-              <div class="asc-icon"><img src="https://cdn3d.iconscout.com/3d/premium/thumb/list-project-management-3d-icon-png-download-5888926.png" alt="" class="w-100 h-100" ></div>
+              <div class="asc-icon"><img src="https://cdn3d.iconscout.com/3d/premium/thumb/list-project-management-3d-icon-png-download-5888926.png" alt="Projects delivered" class="w-100 h-100" loading="lazy"></div>
               <h3>7+</h3>
               <p>Projects Delivered</p>
               <div class="asc-hover-content">
@@ -393,7 +408,7 @@
           </div>
           <div class="col-6">
             <div class="about-stat-card asc-gold">
-              <div class="asc-icon"><img src="https://cdn3d.iconscout.com/3d/premium/thumb/client-feedback-3d-icon-download-in-png-blend-fbx-gltf-file-formats--like-logo-customer-review-satisfaction-rating-compliance-and-regulation-pack-business-icons-9635746.png" alt="" class="w-100 h-100" ></div>
+              <div class="asc-icon"><img src="https://cdn3d.iconscout.com/3d/premium/thumb/client-feedback-3d-icon-download-in-png-blend-fbx-gltf-file-formats--like-logo-customer-review-satisfaction-rating-compliance-and-regulation-pack-business-icons-9635746.png" alt="Happy clients" class="w-100 h-100" loading="lazy"></div>
               <h3>5+</h3>
               <p>Happy Clients</p>
               <div class="asc-hover-content">
@@ -404,7 +419,7 @@
           </div>
           <div class="col-6">
             <div class="about-stat-card asc-pink">
-              <div class="asc-icon"><img src="https://cdn3d.iconscout.com/3d/premium/thumb/technology-3d-icon-png-download-5204278.png" alt="" class="w-100 h-100" ></div>
+              <div class="asc-icon"><img src="https://cdn3d.iconscout.com/3d/premium/thumb/technology-3d-icon-png-download-5204278.png" alt="Core technologies" class="w-100 h-100" loading="lazy"></div>
               <h3>2</h3>
               <p>Core Technologies</p>
               <div class="asc-hover-content">
@@ -689,7 +704,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <p class="mb-1">Designed & Built by <a href="#">Thirumurugan</a></p>
+  <p class="mb-1">Designed & Built by <a href="#" rel="author">Thirumurugan S</a></p>
   <p class="mb-0">© 2025 All rights reserved.</p>
 </footer>
 
@@ -706,13 +721,12 @@
   <i class="fas fa-arrow-up"></i>
 </button>
 
-<!-- SCRIPTS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<!-- React + ReactDOM (UMD for CDN use) -->
-<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-<script src="portfolio.js"></script>
+<!-- SCRIPTS — deferred for faster first paint -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js" defer></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" defer></script>
+<script src="portfolio.js" defer></script>
 <script>
   // EmailJS init — replace with your actual Public Key
   emailjs.init('YOUR_PUBLIC_KEY');
