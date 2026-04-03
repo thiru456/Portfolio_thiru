@@ -293,3 +293,46 @@ const counterObserver = new IntersectionObserver((entries) => {
 
 const aboutSection = document.querySelector('#about');
 if (aboutSection) counterObserver.observe(aboutSection);
+
+/* =====================
+   IMAGE LIGHTBOX
+===================== */
+(function () {
+  const lightbox = document.getElementById('imgLightbox');
+  const lbImg    = document.getElementById('lbImg');
+  const lbClose  = document.getElementById('lbClose');
+
+  // Tag every <img> on the page with data-lightbox
+  document.querySelectorAll('img').forEach(img => {
+    img.setAttribute('data-lightbox', '');
+  });
+
+  function openLightbox(src, alt) {
+    lbImg.src = src;
+    lbImg.alt = alt || '';
+    lightbox.classList.add('lb-open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('lb-open');
+    document.body.style.overflow = '';
+    // clear src after transition so no flash on reopen
+    setTimeout(() => { lbImg.src = ''; }, 320);
+  }
+
+  // Click on any img opens lightbox
+  document.addEventListener('click', e => {
+    const img = e.target.closest('img[data-lightbox]');
+    if (img) openLightbox(img.src, img.alt);
+  });
+
+  // Close on button, backdrop click, or Escape key
+  lbClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+})();
